@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffeef8 0%, #ffc3e1 50%, #ff9ec7 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in;
+}
+
+.heart-icon {
+  font-size: 80px;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.title {
+  color: #ff1744;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.subtitle {
+  color: #ff69b4;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.music-player {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+}
+
+.play-btn {
+  background: linear-gradient(135deg, #ff6b9d, #ff1744);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+}
+
+.gallery {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+}
+
+.section-title {
+  color: #ff1744;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.photo-box {
+  background: #ffe4e9;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-box:hover {
+  transform: translateY(-5px);
+}
+
+.photo-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.photo-preview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.love-letter {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+  text-align: center;
+}
+
+.love-letter p {
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+
+.signature {
+  color: #ff1744;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2rem; }
+  .heart-icon { font-size: 60px; }
+  .photos { grid-template-columns: 1fr; }
+}
